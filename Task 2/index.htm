@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Compact Image Slider</title>
+    <!-- Подключение стилей Swiper и нашего CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- Контейнер слайдера -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Слайды с изображениями -->
+            <div class="swiper-slide">
+                <img src="https://via.placeholder.com/600x300?text=Slide+1" alt="Slide 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://via.placeholder.com/600x300?text=Slide+2" alt="Slide 2">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://via.placeholder.com/600x300?text=Slide+3" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- Элементы навигации -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Подключение Swiper JS и нашего скрипта -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
