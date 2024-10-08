@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compact Image Slider</title>
-    <!-- Подключение стилей Swiper и нашего CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Compact Image Slider - Торты</title>
+        <!-- Подключение стилей Swiper, нашего основного CSS и CSS для фона -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="background.css"> <!-- Подключаем CSS для анимации фона -->
+    </head>
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#task1">Задание 1</a></li>
+            <li><a href="#task2">Задание 2</a></li>
+            <li><a href="#task3">Задание 3</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="slider-title">Торты</h1>
 
     <!-- Контейнер слайдера -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <!-- Слайды с изображениями -->
             <div class="swiper-slide">
-                <img src="https://via.placeholder.com/600x300?text=Slide+1" alt="Slide 1">
+                <img src="assets/image1.jpg" alt="Slide 1">
             </div>
             <div class="swiper-slide">
-                <img src="https://via.placeholder.com/600x300?text=Slide+2" alt="Slide 2">
+                <img src="assets/image2.jpeg" alt="Slide 2">
             </div>
             <div class="swiper-slide">
-                <img src="https://via.placeholder.com/600x300?text=Slide+3" alt="Slide 3">
+                <img src="assets/image3.jpg" alt="Slide 3">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/image4.jpg" alt="Slide 4">
             </div>
         </div>
 
