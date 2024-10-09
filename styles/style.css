@@ -142,7 +142,6 @@ button:hover {
     background-color: #696969; 
 }
 
-
 #result {
     margin-top: 20px;
     font-size: 19.5px;
@@ -158,3 +157,48 @@ input:invalid, select:invalid {
     border-color: #e74c3c; 
 }
 
+@media (max-width: 768px) {
+    .swiper-container {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .swiper-slide img {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .navbar ul li {
+        margin-right: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        right: -20px;
+        left: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        right: -15px;
+        left: -15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
