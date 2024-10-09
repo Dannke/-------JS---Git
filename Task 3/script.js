@@ -2,17 +2,14 @@ document.getElementById('deposit-type').addEventListener('change', function() {
     const depositType = this.value;
     const depositTerm = document.getElementById('deposit-term');
 
-    // Очищаем список сроков
     depositTerm.innerHTML = '<option value="" disabled selected>Выберите срок вклада</option>';
 
     if (depositType === 'replenishable') {
-        // Сроки для пополняемого вклада
         depositTerm.innerHTML += '<option value="6m">6 месяцев - 20%</option>';
         depositTerm.innerHTML += '<option value="1y">1 год - 22%</option>';
         depositTerm.innerHTML += '<option value="1.5y">1,5 года - 15%</option>';
         depositTerm.innerHTML += '<option value="2y">2 года - 10%</option>';
     } else if (depositType === 'term') {
-        // Сроки для срочного вклада
         depositTerm.innerHTML += '<option value="3m">3 месяца - 20%</option>';
         depositTerm.innerHTML += '<option value="6m">6 месяцев - 22%</option>';
         depositTerm.innerHTML += '<option value="9m">9 месяцев - 23%</option>';
@@ -23,12 +20,10 @@ document.getElementById('deposit-type').addEventListener('change', function() {
 });
 
 document.getElementById('calculate-btn').addEventListener('click', function() {
-    // Получаем значения из формы
     const depositType = document.getElementById('deposit-type').value;
     const depositTerm = document.getElementById('deposit-term').value;
     const depositAmount = parseFloat(document.getElementById('deposit-amount').value);
 
-    // Проверка: все поля должны быть заполнены
     if (!depositType) {
         alert("Пожалуйста, выберите вид вклада.");
         return;
@@ -44,7 +39,6 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
         return;
     }
 
-    // Если все поля заполнены, можно продолжить с расчетом
     calculateDeposit(depositType, depositTerm, depositAmount);
 });
 
@@ -120,10 +114,8 @@ function calculateDeposit(depositType, depositTerm, depositAmount) {
             break;
     }
 
-    // Рассчитываем итоговую сумму
     const finalAmount = depositAmount * Math.pow((1 + interestRate), termInYears);
 
-    // Вывод результата
     document.getElementById('result').innerText = 
         `Вы выбрали ${depositType === 'replenishable' ? 'пополняемый' : 'срочный'} вклад на срок ${termDisplay}.\n` +
         `Сумма вклада: ${depositAmount} руб.\n` +
