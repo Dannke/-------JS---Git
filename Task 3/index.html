@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <title>Калькулятор вкладов</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../Task 2\index.html">Задание 2</a></li>
+            <li><a href="../Task 3\index.html">Задание 3</a></li>
+        </ul>
+    </nav>
+    <h1>Калькулятор вкладов</h1>
+    
+    <!-- Форма для расчета вклада -->
+    <form id="deposit-form">
+        <!-- Вид вклада -->
+        <label for="deposit-type">Вид вклада:</label>
+        <select id="deposit-type" required>
+            <option value="" disabled selected>Выберите вид вклада</option>
+            <option value="replenishable">Пополняемый</option>
+            <option value="term">Срочный</option>
+        </select>
+
+        <br><br>
+
+        <!-- Срок вклада (изменяется в зависимости от вида вклада) -->
+        <label for="deposit-term">Срок вклада:</label>
+        <select id="deposit-term" required>
+            <option value="" disabled selected>Выберите срок вклада</option>
+        </select>
+
+        <br><br>
+
+        <!-- Сумма вклада -->
+        <label for="deposit-amount">Сумма вклада:</label>
+        <input type="number" id="deposit-amount" placeholder="Введите сумму" required min="0">
+
+        <br><br>
+
+        <!-- Кнопка рассчитать -->
+        <button type="button" id="calculate-btn">Рассчитать</button>
+    </form>
+
+    <!-- Поле для отображения результата -->
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

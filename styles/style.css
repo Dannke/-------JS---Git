@@ -98,3 +98,76 @@ body {
 .swiper-button-prev {
     left: -40px; /* Смещение влево за границы */
 }
+
+/* Контейнер для формы */
+form {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Светлый фон для формы */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для объема */
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #333; /* Темный цвет для заголовка */
+}
+
+/* Стили для меток (label) */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555; /* Средне-серый цвет текста */
+}
+
+/* Стили для полей выбора (select) и ввода (input) */
+select, input[type="number"] {
+    width: 100%; /* Полная ширина */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Легкая граница */
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333; /* Цвет текста */
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопки */
+button {
+    width: 100%; /* Полная ширина */
+    padding: 10px;
+    background-color: #333; /* Зеленый фон */
+    color: white; /* Белый текст */
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Анимация при наведении */
+}
+
+button:hover {
+    background-color: #696969; /* Темнее при наведении */
+}
+
+/* Поле для результата */
+#result {
+    margin-top: 20px;
+    font-size: 19.5px;
+    color: #333; /* Темный цвет текста */
+    text-align: center;
+}
+
+/* Центровка текста внутри формы */
+form * {
+    text-align: left;
+}
+
+/* Подсказка о том, как стилизовать сообщения об ошибках (если нужно) */
+input:invalid, select:invalid {
+    border-color: #e74c3c; /* Красная граница при ошибке */
+}
+
