@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поиск вакансий HH.ru</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../task2_index.html">Слайдер</a></li>
+        <li><a href="../task3_index.html">Калькулятор</a></li>
+        <li><a href="../task4_index.html">Виджет</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Поиск вакансий на HH.ru</h1>
+      <form id="search-form" class="search-form1">
+        <input
+          type="text"
+          id="query"
+          placeholder="Введите ключевые слова (например, 'frontend')"
+          required
+        />
+        <button type="submit">Искать</button>
+      </form>
+
+      <ul id="vacancy-list" class="vacancy-list">
+        <!-- Вакансии будут добавляться сюда через JS -->
+      </ul>
+
+      <div id="pagination" class="hidden">
+        <button id="prev-page" disabled>Предыдущая страница</button>
+        <span id="page-num">Страница 1</span>
+        <button id="next-page">Следующая страница</button>
+      </div>
+    </div>
+
+    <!-- Подключаем axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Подключаем наш JS файл -->
+    <script src="script.js"></script>
+  </body>
+</html>
